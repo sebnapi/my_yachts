@@ -1,0 +1,26 @@
+<div id="yacht-<%= yacht.object_id %>" class="col-sm-6">
+  <div class="mosaic-block bar2" style="height:300px;display:block;">
+    <div style="background:url(<%= yacht.picture %>) no-repeat center center; background-size:auto 300px; height:300px; padding: 10px;">
+      <div style="background-color: rgba(0,0,0,0.5); display:inline-block; padding:3px 10px 3px 10px">
+        <text class="yacht_name"><%= yacht.name %></text>
+      </div>
+      <div class="pull-right" style="background-color: rgba(0,0,0,0.5); display:inline-block; padding:3px 10px 3px 10px">
+        <text class="yacht_name"><%= yacht.length_m %> m</text>
+      </div>
+      <div class="pull-right" style="background-color: rgba(0,0,0,0.5); display:inline-block; padding:3px 10px 3px 10px; margin-right:3px">
+        <text class="yacht_name"><%= yacht.manufacture_year %></text>
+      </div>
+      <a style="height: 150px; display: inline; left: 0px; bottom: -110px;" href="http://www.nonsensesociety.com/2010/12/i-am-not-human-portraits/" target="_blank" class="mosaic-overlay">
+        <div class="details">
+          <h4>
+            <div style="width:100%;display: inline-block">
+              <span class="label label-default pull-right" style="background-color: rgba(0,0,0,0.7);"><%= yacht.length_f %></span>
+              <span class="label label-default pull-right" style="background-color: rgba(0,0,0,0.7);">Builder: <%= yacht.builder%></span>
+            </div>
+          </h4>
+          <div style="margin: 5px"><%= yacht.description %></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

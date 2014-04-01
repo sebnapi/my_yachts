@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @yacht.name %>
+</p>
+
+<p>
+  <strong>Length m:</strong>
+  <%= @yacht.length_m %>
+</p>
+
+<p>
+  <strong>Length f:</strong>
+  <%= @yacht.length_f %>
+</p>
+
+<p>
+  <strong>Manufacture year:</strong>
+  <%= @yacht.manufacture_year %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @yacht.country %>
+</p>
+
+<p>
+  <strong>Builder:</strong>
+  <%= @yacht.builder %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @yacht.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @yacht.picture %>
+</p>
+
+<%= link_to 'Edit', edit_yacht_path(@yacht) %> |
+<%= link_to 'Back', yachts_path %>

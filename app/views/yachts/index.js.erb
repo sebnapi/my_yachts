@@ -1,0 +1,11 @@
+$('#my-yachts').append('<%= j render @yachts %>');
+$(document).ready(function($){
+    $('.bar2').mosaic({
+        animation	:	'slide'		//fade or slide
+    });});
+<% if @yachts.next_page %>
+$('.pagination').replaceWith('<%= j will_paginate @yachts %>');
+<% else %>
+$(window).off('scroll');
+$('.pagination').remove();
+<% end %>

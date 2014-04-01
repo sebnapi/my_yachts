@@ -1,0 +1,49 @@
+
+<div class="row">
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+
+<h1>Listing yachts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Length m</th>
+      <th>Length f</th>
+      <th>Manufacture year</th>
+      <th>Country</th>
+      <th>Builder</th>
+      <th>Description</th>
+      <th>Picture</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+<tbody>
+    <% @yachts.each do |yacht| %>
+      <tr>
+        <td><%= yacht.name %></td>
+        <td><%= yacht.length_m %></td>
+        <td><%= yacht.length_f %></td>
+        <td><%= yacht.manufacture_year %></td>
+        <td><%= yacht.country %></td>
+        <td><%= yacht.builder %></td>
+        <td><%= yacht.description %></td>
+        <td><%= yacht.picture %></td>
+        <div class=".col-md-6" style="background:url(<%= yacht.picture %>) no-repeat center center; background-size: cover; height: 280px">.col-md-4</div>
+
+        <td><%= link_to 'Show', yacht %></td>
+        <td><%= link_to 'Edit', edit_yacht_path(yacht) %></td>
+        <td><%= link_to 'Destroy', yacht, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Yacht', new_yacht_path %>
