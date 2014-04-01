@@ -1,5 +1,37 @@
-<p id="notice"><%= notice %></p>
 
+<style>
+.yacht_name{
+color: #ffffff;
+font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+font-size: 20px;
+}
+
+.mosaic-block {
+    float:none;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    width: auto;
+    border: 1px solid #FFF;
+}
+</style>
+
+<div id="yacht-<%= @yacht.object_id %>" class="col-sm-6">
+  <div class="mosaic-block bar2" style="height:300px;display:block;">
+    <div style="background:url(<%= @yacht.picture %>) no-repeat center center; background-size:auto 300px; height:300px; padding: 10px;">
+      <div style="background-color: rgba(0,0,0,0.5); display:inline-block; padding:3px 10px 3px 10px">
+        <text class="yacht_name"><%= @yacht.name %></text>
+      </div>
+      <div class="pull-right" style="background-color: rgba(0,0,0,0.5); display:inline-block; padding:3px 10px 3px 10px">
+        <text class="yacht_name"><%= @yacht.length_m %> m</text>
+      </div>
+      <div class="pull-right" style="background-color: rgba(0,0,0,0.5); display:inline-block; padding:3px 10px 3px 10px; margin-right:3px">
+        <text class="yacht_name"><%= @yacht.manufacture_year %></text>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-sm-6">
 <p>
   <strong>Name:</strong>
   <%= @yacht.name %>
@@ -35,10 +67,9 @@
   <%= @yacht.description %>
 </p>
 
-<p>
-  <strong>Picture:</strong>
-  <%= @yacht.picture %>
-</p>
+  <%= link_to 'Edit', edit_yacht_path(@yacht),:class=>"btn btn-default" %>
+  <%= link_to 'Back', yachts_path,:class=>"btn btn-default" %>
 
-<%= link_to 'Edit', edit_yacht_path(@yacht) %> |
-<%= link_to 'Back', yachts_path %>
+</div>
+
+

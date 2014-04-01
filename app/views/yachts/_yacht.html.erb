@@ -10,7 +10,7 @@
       <div class="pull-right" style="background-color: rgba(0,0,0,0.5); display:inline-block; padding:3px 10px 3px 10px; margin-right:3px">
         <text class="yacht_name"><%= yacht.manufacture_year %></text>
       </div>
-      <a style="height: 150px; display: inline; left: 0px; bottom: -110px;" href="http://www.nonsensesociety.com/2010/12/i-am-not-human-portraits/" target="_blank" class="mosaic-overlay">
+      <a style="height: 150px; display: inline; left: 0px; bottom: -110px;" href="<%= url_for yacht%>" class="mosaic-overlay">
         <div class="details">
           <h4>
             <div style="width:100%;display: inline-block">
@@ -18,7 +18,7 @@
               <span class="label label-default pull-right" style="background-color: rgba(0,0,0,0.7);">Builder: <%= yacht.builder%></span>
             </div>
           </h4>
-          <div style="margin: 5px"><%= yacht.description %></div>
+          <div class="yacht_description" style="margin: 5px"><%= yacht.description %></div>
         </div>
       </a>
     </div>

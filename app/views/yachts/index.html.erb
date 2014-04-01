@@ -18,33 +18,32 @@
       width: auto;
       border: 1px solid #FFF;
   }
-</style>
 
-<script>
-    $(function() {
-        $( "#button" ).click(function(){
-            $( "#yacht-" ).switchClass( "col-sm-6", "col-sm-12", 1000 );
-            return false;
-        });
-    });
-</script>
+  .align_left{
+      text-align: center;
+  }
+</style>
 
 <script type="text/javascript">
     $(document).ready(function($){
         $('.bar2').mosaic({
             animation	:	'slide'		//fade or slide
         });
+
+        $(".yacht_description").text(function(index, text) {
+            var i = text.indexOf(" ", 350);
+            if(i != -1){
+                return text.substr(0, i+1)+"...";
+            }
+            return text
+        });
     });
 </script>
-
-<a href="#" id="button" class="ui-state-default ui-corner-all">Run Effect</a>
-
-
 
 <div class="row" id="my-yachts">
         <%= render @yachts %>
 </div>
 
-<div id="infinite-scrolling">
+<div id="infinite-scrolling" style="text-align: center;">
   <%= will_paginate %>
 </div>

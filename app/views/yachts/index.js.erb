@@ -2,7 +2,15 @@ $('#my-yachts').append('<%= j render @yachts %>');
 $(document).ready(function($){
     $('.bar2').mosaic({
         animation	:	'slide'		//fade or slide
-    });});
+    });
+    $(".yacht_description").text(function(index, text) {
+        var i = text.indexOf(" ", 350);
+        if(i != -1){
+            return text.substr(0, i+1)+"...";
+        }
+        return text
+    });
+});
 <% if @yachts.next_page %>
 $('.pagination').replaceWith('<%= j will_paginate @yachts %>');
 <% else %>

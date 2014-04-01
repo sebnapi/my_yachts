@@ -46,6 +46,8 @@
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
         <%= f.submit :class => 'btn btn-default'%>
+        <%= link_to 'Discard', @yacht,:class=>"btn btn-default" %>
+        <%= link_to 'Back', yachts_path,:class=>"btn btn-default" %>
     </div>
   </div>
 <% end %>
