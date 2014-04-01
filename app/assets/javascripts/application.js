@@ -14,6 +14,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-//= require jquery.ui.all
 //= require bootstrap.min
 //= require mosaic.1.0.1.min
